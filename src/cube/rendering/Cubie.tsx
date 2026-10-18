@@ -16,11 +16,7 @@ export default function Cubie({ coord, size, all }: CubieProps) {
       {stickers.map((face) => (
         <mesh
           key={face.color}
-          position={[
-            face.n[0] * (0.96 / 2 + 0.002),
-            face.n[1] * (0.96 / 2 + 0.002),
-            face.n[2] * (0.96 / 2 + 0.002),
-          ]}
+          position={face.n.map( val =>val * (0.96 / 2 + 0.002)) as Vector3Tuple}
           rotation={face.rot}
         >
           <planeGeometry args={[0.8, 0.8]} />
