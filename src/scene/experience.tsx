@@ -1,4 +1,5 @@
 import { Environment, Grid, OrbitControls } from "@react-three/drei";
+import Cube from "../cube/rendering/cube";
 
 export default function Experience() {
   return (
@@ -19,7 +20,7 @@ export default function Experience() {
         shadow-camera-far={200}
       />
       {/*Cube and Group*/}
-      <mesh position={[0, 1, 0]}>
+      <mesh position={[14, 1, 0]}>
         <boxGeometry args={[1, 2, 3]} />
         <meshPhysicalMaterial
           color={"hotpink"}
@@ -32,6 +33,7 @@ export default function Experience() {
           thickness={0.5}
         />
       </mesh>
+      <Cube />
       {/*Shadow Platform and Grid*/}
       <mesh position={[0, 0.01, 0]} receiveShadow>
         <planeGeometry args={[100, 100]} />
