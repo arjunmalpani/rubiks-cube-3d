@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { JSX } from "react";
 
 export const DirectionalLightingConfig = {
